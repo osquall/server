@@ -213,8 +213,7 @@ class MANGOS_DLL_SPEC SpellAuraHolder
         ~SpellAuraHolder();
     private:
         void UpdateAuraApplication();                       // called at charges or stack changes
-
-        SpellEntry const* m_spellProto;
+		SpellEntry const* m_spellProto;
 
         Unit* m_target;
         ObjectGuid m_casterGuid;
@@ -506,6 +505,8 @@ class MANGOS_DLL_SPEC Aura
         SpellAuraHolder* const m_spellAuraHolder;
     private:
         void ReapplyAffectedPassiveAuras(Unit* target);
+		uint8 m_SecondsPassed = 0;
+		uint32 m_SecondTimer = 0;
 };
 
 class MANGOS_DLL_SPEC AreaAura : public Aura
