@@ -505,8 +505,9 @@ class MANGOS_DLL_SPEC Aura
         SpellAuraHolder* const m_spellAuraHolder;
     private:
         void ReapplyAffectedPassiveAuras(Unit* target);
-		uint8 m_SecondsPassed = 0;
-		uint32 m_SecondTimer = 0;
+		uint8 m_SecondsPassed;
+		uint32 m_SecondTimer;
+
 };
 
 class MANGOS_DLL_SPEC AreaAura : public Aura
